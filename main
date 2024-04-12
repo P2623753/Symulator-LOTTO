@@ -1,0 +1,51 @@
+import random
+
+
+
+def get_number():
+
+    """Get number from user.
+    Try until user gives a proper number.
+    :rtype: int
+    :return: given number as int
+    """
+
+    while True:
+
+        try:
+
+            result = int(input("Choose the number: "))
+
+            break
+
+        except ValueError:
+
+            print("It's not a number")
+
+
+    return result
+
+
+
+def get_numbers():
+
+    """Get 6 different numbers between 1 and 49.
+    :rtype: list
+    :return: list with 6 numbers provide by user
+
+    """
+
+    result = []
+
+    while len(result) < 6:
+
+        number = get_number()
+
+        if number not in result and 0 < number <= 49:
+
+            result.append(number)
+
+
+    return result
+
+
